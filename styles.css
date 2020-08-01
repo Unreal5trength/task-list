@@ -1,19 +1,78 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: darkslategrey;
 }
 
 #taskList {
     width: auto;
     height: auto;
     padding: 2% 2%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 div.tasks {
     width: auto;
-    height: 10%;
-    margin: 0;
-    border: 1px solid blue;
-    border-bottom: 1px solid purple;
+    overflow: auto;
+    margin: 0 0 5px 0;
+    background-color: darkred;
+    /* border: 1px solid black; */
+    /* border-bottom: 1px solid purple; */
+}
+
+div.tasks > div.buttons {
+    height: fit-content;
+    width: 30%;
+    /* background-color: green; */
+    color: white;
+    float: left;
+}
+
+div.tasks > div.information {
+    height: fit-content;
+    width: 70%;
+    /* background-color: brown; */
+    color: white;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div.tasks > div.information > p {
+    padding: 2%;
+    margin: 0px;
+    font-size: 18px;
+    text-align: left;
+}
+
+div.tasks > div.information::after {
+    clear: both;
+}
+
+div.tasks > div.buttons > button.complete {
+    float: left;
+    width: 50%;
+}
+
+div.tasks > div.buttons > button.delete {
+    float: left;
+    width: 50%;
+}
+
+div.tasks > div.buttons > button.up {
+    float: left;
+    width: 50%;
+}
+
+div.tasks > div.buttons > button.up::after {
+    clear: both;
+}
+
+div.tasks > div.buttons > button.down {
+    float: left;
+    width: 50%;
+}
+
+div.tasks > div.buttons > button.down::after {
+    clear: both;
 }
