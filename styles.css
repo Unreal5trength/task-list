@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#taskList {
+    width: auto;
+    height: auto;
+    padding: 2% 2%;
+    border: 1px solid red;
+}
+
+div.tasks {
+    width: auto;
+    height: 10%;
+    margin: 0;
+    border: 1px solid blue;
+    border-bottom: 1px solid purple;
+}
