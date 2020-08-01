@@ -37,7 +37,7 @@ function createButtons(parent) {
 
     let upBtn = document.createElement('button');
     upBtn.className = 'up';
-    upBtn.innerHTML = '^';
+    upBtn.innerHTML = 'Up';
     parent.appendChild(upBtn);
 
     let deleteBtn = document.createElement('button');
