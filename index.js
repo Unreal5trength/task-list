@@ -46,26 +46,31 @@ function createTaskContent(btn) {
     taskName.innerHTML = btn.previousElementSibling.value;
 
     let hr = document.createElement('hr');
-    task.appendChild(hr);
+    infoNode.appendChild(hr);
 }
 
 function createTask(btn) {
-    // if btn = false, create a first task
     let task = btn.parentNode.parentNode;
+    console.log(task)
     let taskClassList = [];
     for (let i = 0; i < task.classList.length; i++) {
         taskClassList.push(task.classList.item(i));
     };
+    console.log(taskClassList)
     let indent = taskClassList.filter(c => {
         return c.startsWith("indent");
     });
+    console.log(indent)
     indent = parseInt(indent[0].slice(6, 7));
+    console.log(indent)
     if (indent > 0 && indent < 3) {
-        let indentedTask = document.createElement('div');
-        task.appendChild(indentedTask);
-        indentedTask.classList = `task ${"indent"+ (indent + 1)}`;
-        createCreationNodes(indentedTask);
-
+        if (indent + 1 > 0 && indent + 1 < 3) {
+            let indentedTask = document.createElement('div');
+            task.appendChild(indentedTask);
+            indentedTask.classList = `task ${"indent"+ (indent + 1)}`;
+            createCreationNodes(indentedTask);
+        }
+        
         let equalIndentTask = document.createElement('div');
         task.parentNode.appendChild(equalIndentTask);
         equalIndentTask.classList = `task indent${indent}`;
@@ -80,7 +85,7 @@ function createTask(btn) {
         task.parentNode.appendChild(newTask);
         newTask.classList = `task indent0`;
         createCreationNodes(newTask);
-    };
+}
     
 };
 
@@ -97,8 +102,10 @@ function createCreationNodes(task) {
 
         let createBtn = document.createElement('button');
         creationNode.appendChild(createBtn);
+        createBtn.setAttribute('type', 'button');
         createBtn.classList.add("createBtn");
         createBtn.innerHTML = "Create Task";
+
         createBtn.addEventListener('click', () => {
             let btn = event.currentTarget;
             createTask(btn);
@@ -110,6 +117,8 @@ function createCreationNodes(task) {
         creationNode.appendChild(hr);
 };
 
+
+// createTask(false);
 
 createBtn[0].addEventListener('click', (event) => {
     let btn = event.currentTarget;

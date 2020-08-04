@@ -23,8 +23,8 @@ body {
 }
 
 .taskInfoNode > .completeDiv {
-    min-width: 10%;
-    max-width: 15%;
+    /* min-width: 10%; */
+    width: fit-content;
     min-height: 10%;
     max-height: fit-content;
     margin: 0px;
@@ -34,7 +34,7 @@ body {
 }
 
 .taskInfoNode > .completeDiv > button {
-    width: 75%;
+    /* width: 75%; */
     height: 50%;
     font-size: 16px;
     color: white;
@@ -44,20 +44,31 @@ body {
 }
 
 .taskInfoNode > .nameDiv {
-    min-width: 85%;
-    max-width: 90%;
+    width: auto;
     min-height: 10%;
     max-height: fit-content;
-    float: right;
+    float: left;
+}
+
+.taskInfoNode > .nameDiv > h3 {
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    vertical-align: middle;
 }
 
 hr {
     margin: 6px 0px;
     padding: 0;
 }
+
 .taskCreationNode > hr {
     margin: 6px 0px;
     padding: 0;
+}
+
+.taskInfoNode > hr {
+    clear: both;
 }
 
 .indent0 {
