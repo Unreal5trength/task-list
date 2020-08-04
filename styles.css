@@ -5,15 +5,73 @@ body {
 
 #taskList {
     width: auto;
-    height: auto;
+    /* height: auto; */
+    overflow: auto;
     padding: 2% 2%;
-    border: 1px solid red;
 }
 
-div.tasks {
-    width: auto;
-    height: 10%;
+.task {
+    min-height: 10%;
+    max-height: fit-content;
     margin: 0;
-    border: 1px solid blue;
-    border-bottom: 1px solid purple;
+}
+
+.taskCreationNode, .taskInfoNode {
+    margin: 12px 18px;
+    padding: 0%;
+    overflow: auto;
+}
+
+.taskInfoNode > .completeDiv {
+    min-width: 10%;
+    max-width: 15%;
+    min-height: 10%;
+    max-height: fit-content;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    float: left;
+}
+
+.taskInfoNode > .completeDiv > button {
+    width: 75%;
+    height: 50%;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.taskInfoNode > .nameDiv {
+    min-width: 85%;
+    max-width: 90%;
+    min-height: 10%;
+    max-height: fit-content;
+    float: right;
+}
+
+hr {
+    margin: 6px 0px;
+    padding: 0;
+}
+.taskCreationNode > hr {
+    margin: 6px 0px;
+    padding: 0;
+}
+
+.indent0 {
+    width: 100%;
+    float: right;
+}
+
+.indent1 {
+    width: 80%;
+    float: right;
+}
+
+
+.indent2 {
+    width: 80%;
+    float: right;
 }

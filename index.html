@@ -6,13 +6,14 @@
     <title>Task List</title>
 </head>
 <body>
-    <form>
-        <label for="taskInput"></label>
-        <input type="text" id="taskInput" placeholder="Task name...">
-        <button id="addTask" type="button">Add task.</button>
-    </form>
-    <button id='test'>Click</button>
-    <div id="taskList"></div>
+    <div id="taskList">
+        <div class="task indent0">
+            <div class="taskCreationNode">
+                <input type="text" class="createName" placeholder="Task name...">
+                <button class="createBtn">Create Task</button>
+            </div>
+            <hr>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
