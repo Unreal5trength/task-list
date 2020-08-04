@@ -10,6 +10,17 @@ body {
     padding: 2% 2%;
 }
 
+#optionBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#optionBar button {
+    float: right;
+    font-size: 12px;
+}
+
 .task {
     min-height: 10%;
     max-height: fit-content;
@@ -85,4 +96,35 @@ hr {
 .indent2 {
     width: 80%;
     float: right;
+}
+
+body.darkMode {
+    background-color: #4b5d67;
+}
+
+body.darkMode input {
+    background-color: #322f3d;
+    color: white;
+}
+
+body.darkMode input:focus {
+    outline: none; /* Removes the black border around text box when selected */
+}
+
+body.darkMode input::placeholder {
+    color: white;
+}
+
+body.darkMode button {
+    background-color: #322f3d;
+    color: white;
+}
+
+body.darkMode button.completeBtn {
+    background-color: #87556f;
+    border: 1px solid #59405c;
+}
+
+body.darkMode hr {
+    border-color: #59405c;
 }

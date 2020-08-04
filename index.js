@@ -2,6 +2,8 @@ const taskList = document.getElementById('taskList');
 const tasks = document.getElementsByClassName('task');
 const createName = document.getElementsByClassName('createName');
 const createBtn = document.getElementsByClassName('createBtn');
+const body = document.getElementsByTagName('body')[0];
+const optionBar = document.getElementById('optionBar');
 
 function deleteTaskElement(btn) {
     let taskElement = btn.parentNode.parentNode;
@@ -124,3 +126,31 @@ createBtn[0].addEventListener('click', (event) => {
     createTaskContent(btn);
     deleteCreationNode(btn);
 }); // Creates 
+
+function darkMode(choice) {
+    switch (choice) {
+        case true:
+            body.classList.add('darkMode');
+            break;
+        case false:
+            body.classList.remove('darkMode');
+            break;
+        case 'toggle':
+            body.classList.toggle('darkMode');
+            break
+        default:
+            console.log("Please specify true or false.");
+            break;
+    }
+}
+
+function createOptionBar() {
+    let darkModeBtn = document.createElement('button');
+    optionBar.appendChild(darkModeBtn);
+    darkModeBtn.innerHTML = 'Toggle dark mode';
+    darkModeBtn.addEventListener('click', () => {
+        darkMode('toggle');
+    });
+}
+
+createOptionBar();
