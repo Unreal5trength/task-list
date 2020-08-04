@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#taskList {
+    width: auto;
+    /* height: auto; */
+    overflow: auto;
+    padding: 2% 2%;
+}
+
+.task {
+    min-height: 10%;
+    max-height: fit-content;
+    margin: 0;
+}
+
+.taskCreationNode, .taskInfoNode {
+    margin: 12px 18px;
+    padding: 0%;
+    overflow: auto;
+}
+
+.taskInfoNode > .completeDiv {
+    /* min-width: 10%; */
+    width: fit-content;
+    min-height: 10%;
+    max-height: fit-content;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    float: left;
+}
+
+.taskInfoNode > .completeDiv > button {
+    /* width: 75%; */
+    height: 50%;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.taskInfoNode > .nameDiv {
+    width: auto;
+    min-height: 10%;
+    max-height: fit-content;
+    float: left;
+}
+
+.taskInfoNode > .nameDiv > h3 {
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+hr {
+    margin: 6px 0px;
+    padding: 0;
+}
+
+.taskCreationNode > hr {
+    margin: 6px 0px;
+    padding: 0;
+}
+
+.taskInfoNode > hr {
+    clear: both;
+}
+
+.indent0 {
+    width: 100%;
+    float: right;
+}
+
+.indent1 {
+    width: 80%;
+    float: right;
+}
+
+
+.indent2 {
+    width: 80%;
+    float: right;
+}
