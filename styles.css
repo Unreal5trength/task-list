@@ -128,3 +128,7 @@ body.darkMode button.completeBtn {
 body.darkMode hr {
     border-color: #59405c;
 }
+
+body.hideCreationNodes .taskCreationNode {
+    display: none;
+}
