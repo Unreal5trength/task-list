@@ -129,6 +129,10 @@ body.darkMode hr {
     border-color: #59405c;
 }
 
+body.darkMode h3 {
+    color: white;
+}
+
 body.hideCreationNodes .taskCreationNode {
     display: none;
 }
