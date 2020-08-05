@@ -120,13 +120,6 @@ function createCreationNodes(task) {
         creationNode.appendChild(hr);
 };
 
-createBtn[0].addEventListener('click', (event) => {
-    let btn = event.currentTarget;
-    createTask(btn);
-    createTaskContent(btn);
-    deleteCreationNode(btn);
-}); // Creates 
-
 function darkMode(choice) {
     switch (choice) {
         case true:
@@ -141,8 +134,10 @@ function darkMode(choice) {
         default:
             console.log("Please specify true or false.");
             break;
-    }
-}
+    };
+};
+
+
 
 function createOptionBar() {
     let darkModeBtn = document.createElement('button');
@@ -151,6 +146,27 @@ function createOptionBar() {
     darkModeBtn.addEventListener('click', () => {
         darkMode('toggle');
     });
+
+    let toggleCreationNodes = document.createElement('button');
+    optionBar.appendChild(toggleCreationNodes);
+    toggleCreationNodes.innerHTML = 'Hide creation nodes';
+    toggleCreationNodes.addEventListener('click', event => {
+        let btn = event.currentTarget;
+        body.classList.toggle('hideCreationNodes');
+        if (body.classList.contains('hideCreationNodes')) {
+            btn.innerHTML = 'Show creation nodes';
+        } else {
+            btn.innerHTML = 'Hide creation nodes';
+        };
+    });
 }
+
+
+createBtn[0].addEventListener('click', (event) => {
+    let btn = event.currentTarget;
+    createTask(btn);
+    createTaskContent(btn);
+    deleteCreationNode(btn);
+}); // Creates a event listner for the initial creation node.
 
 createOptionBar();
